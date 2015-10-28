@@ -19,7 +19,7 @@ module Phase5
     end
 
     def [](key)
-      @params[key.to_s]
+       @params[key.to_s].nil? ? @params[key.to_sym] : @params[key.to_s]
     end
 
     # this will be useful if we want to `puts params` in the server log
